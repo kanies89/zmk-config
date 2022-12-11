@@ -70,17 +70,17 @@ combo_##name {                        \
 	combos {
 		compatible = "zmk,combos";
 		// invoke macros
-		COMBO(tolayer_0,  &tolayer_0,   31  4)
-		COMBO(tolayer_1,  &tolayer_1,   31  3)
-		COMBO(tolayer_2,  &tolayer_2,   31  2)
-		COMBO(tolayer_3,  &tolayer_3,   31  1)
+		COMBO(tl_0,  &tl_0,   31  4)
+		COMBO(tl_1,  &tl_1,   31  3)
+		COMBO(tl_2,  &tl_2,   31  2)
+		COMBO(tl_3,  &tl_3,   31  1)
 
 	};
 };
 
 / {	
     macros {
-            ZMK_MACRO(tolayer_0,
+            ZMK_MACRO(tl_0,
     	    wait-ms = <0>;
     	    tap-ms = <0>;
             bindings
@@ -91,7 +91,7 @@ combo_##name {                        \
                 , <&macro_tap &rgb_ug RGB_COLOR_HSB(210,50,50)>;
 		)
 		
-	    ZMK_MACRO(tolayer_1,
+	    ZMK_MACRO(tl_1,
 	    wait-ms = <0>;
     	    tap-ms = <0>;
             bindings
@@ -102,7 +102,7 @@ combo_##name {                        \
                 , <&macro_tap &rgb_ug RGB_COLOR_HSB(353,50,45)>;
 		)
 		
-	    ZMK_MACRO(tolayer_2,
+	    ZMK_MACRO(tl_2,
 	    wait-ms = <0>;
     	    tap-ms = <0>;
             bindings
@@ -113,7 +113,7 @@ combo_##name {                        \
                 , <&macro_tap &rgb_ug RGB_COLOR_HSB(54,92,45)>;
 		)
 		
-	    ZMK_MACRO(tolayer_3,
+	    ZMK_MACRO(tl_3,
 	    wait-ms = <0>;
     	    tap-ms = <0>;
             bindings 
@@ -145,7 +145,7 @@ combo_##name {                        \
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp TAB    &kp ENTER      &kp SPACE  &kp BSPC
+                                             &kp TAB    &kp ENTER      &kp SPACE  &tl_3
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -162,7 +162,7 @@ combo_##name {                        \
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
            &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &kp BSPC
+                                             &trans     &kp ESC        &kp BSPC     &tl_3
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -179,7 +179,7 @@ combo_##name {                        \
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
             &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &kp BSPC
+                                             &trans     &trans         &kp BSPC     &tl_3
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -188,7 +188,7 @@ combo_##name {                        \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │          │   │   LED +  │  LED -   │  LED ON  │ LED OFF  │  RESET   │
-            &reset     &trans     &trans     &trans     &trans       &rgb_ug RGB_BRI &rgb_ug RGB_BRD &rgb_ug RGB_ON &rgb_ug RGB_OFF &reset
+            &reset     &trans     &trans     &tl_2      &tl_1       &rgb_ug RGB_BRI &rgb_ug RGB_BRD &rgb_ug RGB_ON &rgb_ug RGB_OFF &reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │          │   │ LED EFF  │          │          │          │BOOTLOADER│
           &bootloader  &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans      &bootloader
@@ -196,7 +196,7 @@ combo_##name {                        \
         //│          │ CLEAR BT │ PROFILE 2│ PROFILE 1│ PROFILE 0|   |          │          │          │          │          │
             &trans   &bt BT_CLR &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans     &trans     &trans     &trans      &trans   
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans    &kp BSPC
+                                             &trans     &trans         &kp BSPC   &tl_0
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
