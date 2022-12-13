@@ -157,7 +157,7 @@ combo_##name {                        \
             &kp INS    &kp N0     &kp N2     &kp N2     &kp N3         &kp PG_UP  &kp UARW  &kp PG_DN  &kp HOME   &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │ BACKSPACE│  4       │  5       │  6       │   │ LEFT     │ DOWN     │ RIGHT    │ END      │  ;       │
-            &kp DEL    &KP BSPC   &kp N4     &kp N5     &kp N6         &kp LARW   &kp DARW   &kp RARW   &kp END    &kp SEMI
+            &kp DEL    &kp BSPC   &kp N4     &kp N5     &kp N6         &kp LARW   &kp DARW   &kp RARW   &kp END    &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │          │  7       │  8       │  9       │   │          │          │          │          │          │
            &caps_word  &none      &kp N7     &kp N8     &kp N9         &none      &none      &trans     &trans     &trans
