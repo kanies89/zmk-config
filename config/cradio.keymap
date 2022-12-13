@@ -171,7 +171,7 @@ combo_##name {                        \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ CAPSLOCK │  [       │  ]       │  {       │ }        │   │  ^       │  (       │  )       │  `       │  ~       │
-            &CAPS      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC       &kp CARET  &kp LPAR   &kp RPAR   &kp GRAVE  &kp TILDE
+            &kp CAPS   &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC       &kp CARET  &kp LPAR   &kp RPAR   &kp GRAVE  &kp TILDE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  %       │   │  *       │  /       │  +       │  -       │  =       │
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp FSLH   &kp PLUS   &kp MINUS  &kp EQUAL
