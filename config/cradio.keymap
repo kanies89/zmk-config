@@ -142,8 +142,8 @@ combo_##name {                        \
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
             HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SQT)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ESC      │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ESC
+        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ BACKSPACE│
+            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp BSPC
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp TAB    &kp ENTER      &kp SPACE  &tl_3
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -156,11 +156,11 @@ combo_##name {                        \
         //│ INSERT   │  0       │  1       │  2       │  3       │   │ PAGE UP  │ UP       │ PAGE DN  │ HOME     │  :       │
             &kp INS    &kp N0     &kp N2     &kp N2     &kp N3         &kp PG_UP  &kp UARW  &kp PG_DN  &kp HOME   &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │ BACKSPACE│  4       │  5       │  6       │   │ LEFT     │ DOWN     │ RIGHT    │ END      │  ;       │
-            &kp DEL    &kp BSPC   &kp N4     &kp N5     &kp N6         &kp LARW   &kp DARW   &kp RARW   &kp END    &kp SEMI
+        //│ CAPS     │          │  4       │  5       │  6       │   │ LEFT     │ DOWN     │ RIGHT    │ END      │  ;       │
+           &caps_word  &none      &kp N4     &kp N5     &kp N6         &kp LARW   &kp DARW   &kp RARW   &kp END    &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │          │  7       │  8       │  9       │   │          │          │          │          │          │
-           &caps_word  &none      &kp N7     &kp N8     &kp N9         &none      &none      &trans     &trans     &trans
+        //│ DELETE   │          │  7       │  8       │  9       │   │          │          │          │          │  ESC     │
+            &kp DEL    &none      &kp N7     &kp N8     &kp N9         &none      &none      &trans     &trans     &kp ESC
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &tl_3
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -176,8 +176,8 @@ combo_##name {                        \
         //│  !       │  @       │  #       │  $       │  %       │   │  *       │  /       │  +       │  -       │  =       │
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp FSLH   &kp PLUS   &kp MINUS  &kp EQUAL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  |       │  &       │  _       │          │   │  ?       │  \       │          │          │          │
-            &trans     &kp PIPE   &kp AMPS   &kp UNDER  &none          &kp QMARK  &kp BSLH   &trans     &trans     &trans
+        //│          │  |       │  &       │  _       │          │   │  ?       │  \       │          │          │  ESC     │
+            &trans     &kp PIPE   &kp AMPS   &kp UNDER  &none          &kp QMARK  &kp BSLH   &trans     &trans     &kp ESC
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &tl_3
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -193,8 +193,8 @@ combo_##name {                        \
         //│BOOTLOADER│          │          │          │          │   │ LED EFF  │          │          │          │BOOTLOADER│
           &bootloader  &none      &none      &none      &none       &rgb_ug RGB_EFF &none    &none      &none      &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │ CLEAR BT │ PROFILE 2│ PROFILE 1│ PROFILE 0|   |          │          │          │          │          │
-            &trans   &bt BT_CLR &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans     &trans     &trans     &trans     &trans   
+        //│          │ CLEAR BT │ PROFILE 2│ PROFILE 1│ PROFILE 0|   |          │          │          │          │  ESC     │
+            &trans   &bt BT_CLR &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans     &trans     &trans     &trans     &kp ESC   
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &tl_0
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
