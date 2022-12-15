@@ -154,7 +154,7 @@ combo_##name {                        \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ INSERT   │  0       │  1       │  2       │  3       │   │ PAGE UP  │ UP       │ PAGE DN  │ HOME     │  :       │
-            &kp INS    &kp N0     &kp N2     &kp N2     &kp N3         &kp PG_UP  &kp UARW  &kp PG_DN  &kp HOME   &kp COLON
+            &kp INS    &kp N0     &kp N1     &kp N2     &kp N3         &kp PG_UP  &kp UARW  &kp PG_DN  &kp HOME   &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │  4       │  5       │  6       │   │ LEFT     │ DOWN     │ RIGHT    │ END      │  ;       │
             &none      &none      &kp N4     &kp N5     &kp N6         &kp LARW   &kp DARW   &kp RARW   &kp END    &kp SEMI
