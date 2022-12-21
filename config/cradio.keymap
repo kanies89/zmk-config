@@ -198,7 +198,7 @@ combo_##name {                        \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │   LED +  │  LED -   │  LED ON  │ LED OFF  │          │
-            &none      &tl4       &tl2       &tl_1      &tl_0       &rgb_ug RGB_BRI &rgb_ug RGB_BRD &rgb_ug RGB_ON &rgb_ug RGB_OFF &none
+            &none      &tl_4      &tl_2      &tl_1      &tl_0       &rgb_ug RGB_BRI &rgb_ug RGB_BRD &rgb_ug RGB_ON &rgb_ug RGB_OFF &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │ LED EFF  │          │          │          │          │
             &none      &none      &none      &none      &none       &rgb_ug RGB_EFF &none    &none      &none      &none
