@@ -215,7 +215,7 @@ combo_##name {                        \
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │          │   │   LED +  │  LED -   │  LED ON  │ LED OFF  │  RESET   │
-            &reset     &none      &none      &none      &none       &rgb_ug RGB_BRI &rgb_ug RGB_BRD &rgb_ug RGB_ON &rgb_ug RGB_OFF &reset
+            &sys_reset     &none      &none      &none      &none       &rgb_ug RGB_BRI &rgb_ug RGB_BRD &rgb_ug RGB_ON &rgb_ug RGB_OFF &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │          │   │ LED EFF  │          │          │          │BOOTLOADER│
           &bootloader  &none      &none      &none      &none       &rgb_ug RGB_EFF &none    &none      &none      &bootloader
